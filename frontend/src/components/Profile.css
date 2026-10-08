@@ -1,0 +1,45 @@
+.profile-view {
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--card-border);
+  margin: 32px 0;
+}
+
+.security-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.security-section h3 {
+  margin-bottom: 8px;
+}

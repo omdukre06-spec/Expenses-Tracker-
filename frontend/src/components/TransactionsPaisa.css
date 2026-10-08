@@ -1,0 +1,109 @@
+.paisa-page {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.stat-row {
+  display: flex;
+  padding: 0;
+}
+
+.stat-item {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-item .label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.border-left {
+  border-left: 1px solid var(--card-border);
+}
+
+.filters-row {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 12px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  width: 100%;
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+.filter-selects {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-selects select {
+  padding: 10px 16px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+.filter-selects select option {
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.empty-state-container {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.empty-state-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-3 {
+  gap: 12px;
+}

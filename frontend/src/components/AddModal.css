@@ -1,0 +1,344 @@
+.paisa-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: modalFadeIn 0.2s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.paisa-modal-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.paisa-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.paisa-modal-header h2 {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  color: var(--text-main);
+  margin: 0;
+}
+
+.paisa-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.paisa-close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}
+
+/* Type Grid (Expense / Income) */
+.paisa-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.paisa-type-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+
+.paisa-type-btn.expense-btn.active {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+[data-theme='light'] .paisa-type-btn.expense-btn.active {
+  background: #fef2f2;
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.paisa-type-btn.income-btn.active {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+[data-theme='light'] .paisa-type-btn.income-btn.active {
+  background: #ecfdf5;
+  border-color: #059669;
+  color: #059669;
+}
+
+/* Split Transaction Button */
+.paisa-split-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 16px;
+  font-family: var(--font-sans);
+}
+
+.paisa-split-btn.active {
+  background: rgba(217, 119, 6, 0.15);
+  border-color: #d97706;
+  color: #d97706;
+}
+
+[data-theme='light'] .paisa-split-btn.active {
+  background: #fff7ed;
+  border-color: #c2410c;
+  color: #c2410c;
+}
+
+/* Field Groups & Labels */
+.paisa-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.paisa-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.paisa-field-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.paisa-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-main);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  font-family: var(--font-sans);
+  transition: border 0.2s;
+}
+
+.paisa-input:focus {
+  border-color: var(--accent-orange);
+}
+
+/* Amount Input with Prefix */
+.paisa-amount-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.paisa-currency-prefix {
+  position: absolute;
+  left: 16px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.paisa-amount-input {
+  width: 100%;
+  padding: 14px 16px 14px 36px;
+  background: var(--bg-main);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+.paisa-amount-input:focus {
+  border-color: var(--accent-orange);
+}
+
+/* Split Rows Section */
+.paisa-split-section {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.paisa-balance-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.paisa-balance-badge.balanced {
+  color: var(--accent-green);
+}
+
+.paisa-balance-badge.unbalanced {
+  color: var(--accent-orange);
+}
+
+.paisa-add-split-link {
+  background: transparent;
+  border: none;
+  color: var(--accent-orange);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.paisa-split-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paisa-split-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paisa-split-num {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  width: 16px;
+  text-align: center;
+}
+
+.paisa-split-select {
+  flex: 1.2;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+}
+
+.paisa-split-amount-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.paisa-split-amount-wrap span {
+  position: absolute;
+  left: 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.paisa-split-amount {
+  padding: 10px 10px 10px 24px !important;
+  font-size: 0.85rem !important;
+}
+
+.paisa-split-note {
+  flex: 1.2;
+  padding: 10px 12px !important;
+  font-size: 0.85rem !important;
+}
+
+/* Footer Actions */
+.paisa-modal-footer {
+  border-top: 1px solid var(--card-border);
+  padding-top: 20px;
+  margin-top: 24px;
+}
+
+.paisa-cancel-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.paisa-save-btn {
+  background: #b45309;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+  font-family: var(--font-sans);
+}
+
+.paisa-save-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+  .paisa-field-row {
+    grid-template-columns: 1fr;
+  }
+  .paisa-split-row {
+    flex-wrap: wrap;
+  }
+}

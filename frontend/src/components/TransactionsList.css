@@ -1,0 +1,72 @@
+.transactions-list-view {
+  padding: 24px;
+}
+
+.search-bar {
+  max-width: 300px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.transactions-table th {
+  text-align: left;
+  padding: 16px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.transactions-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.transactions-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge.income {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+}
+
+.badge.expense {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+.income-text { color: var(--success); font-weight: 600; }
+.expense-text { color: var(--danger); font-weight: 600; }
+
+.actions-cell {
+  display: flex;
+  gap: 16px;
+}
+
+.action-icon {
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.action-icon:hover {
+  color: white;
+}
+
+.action-icon.danger:hover {
+  color: var(--danger);
+}

@@ -1,0 +1,43 @@
+.budget-overview {
+  padding: 32px;
+}
+
+.budget-stats h4 {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.success-text { color: var(--success); }
+.danger-text { color: var(--danger); }
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 6px;
+}
+
+.budget-alert {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-left: 4px solid var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.category-budgets {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cat-budget {
+  padding: 24px;
+}

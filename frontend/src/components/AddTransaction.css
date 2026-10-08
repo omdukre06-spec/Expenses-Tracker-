@@ -1,0 +1,24 @@
+.add-transaction {
+  padding: 32px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.add-transaction h3 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--text-muted);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

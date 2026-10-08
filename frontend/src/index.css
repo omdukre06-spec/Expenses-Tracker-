@@ -1,0 +1,109 @@
+:root {
+  /* Colors inspired by Paisa Finance Manager */
+  --bg-main: #0f0f0f;
+  --bg-sidebar: #141414;
+  --bg-card: #1c1c1c;
+  
+  /* Text */
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  
+  /* Accents */
+  --accent-orange: #d97706;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-purple: #8b5cf6;
+  
+  /* Borders */
+  --card-border: rgba(255, 255, 255, 0.08);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+[data-theme='light'] {
+  --bg-main: #f3f4f6;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --accent-orange: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* Prevent accidental text caret selection on UI elements */
+button, a, nav, aside, header, .glass-card, .summary-card, .nav-btn, .popup-item, .currency-item, .theme-item, .toggle-btn, .view-all {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+h1, h2, h3, h4, .serif-text {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background: var(--accent-orange);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+  font-family: var(--font-sans);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Base utility classes */
+.text-muted {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
